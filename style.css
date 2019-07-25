@@ -1,0 +1,92 @@
+*{
+   background: transparent;
+   margin: 0;
+    padding: 0;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+.logo{
+    width: 10vw;
+    background-color: blueviolet;
+    padding: 10px;
+    border:solid 10px;
+    border-color:black;
+    border-radius: 65px;
+    height: 65%
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+nav{
+   
+    display: flex;
+    width:50%
+    
+    
+}
+.link{
+    color: black;
+    height: 20%;
+    background-color: blueviolet;
+    border: solid 5px;
+    border-radius: 60px;
+    border-color: black;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    text-decoration-line: none;
+    
+
+}
+
+.hero{
+    background-image: url(https://images.solecollector.com/complex/images/c_crop,h_3331,w_4441,x_1012,y_411/enyeaucgxq5toubxpy5z/stadium-goods-easter-giveaway);
+    
+    background-size: 100px 200px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: blueviolet;
+    background: white;
+}
+.footer{
+    display: flex;
+    
+    color: blueviolet;
+    font-size: 20px;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .hero{
+        background-image: url(https://images.solecollector.com/complex/images/c_crop,h_3331,w_4441,x_1012,y_411/enyeaucgxq5toubxpy5z/stadium-goods-easter-giveaway);
+    }
+    header{
+        flex-direction: column;
+        padding: 0px;
+        text-align: center;
+    }
+    nav{
+        width: 100%;
+    }
+
+}
+
+
+
