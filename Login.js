@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('username',user);
         localStorage.setItem('password',pass);
     };
-        // return false;
+        return false;
     };
 });
