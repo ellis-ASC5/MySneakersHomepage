@@ -4,77 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Documents</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://sneakernews.com/wp-content/uploads/2018/09/jordan-1-court-purple-where-to-buy-5.jpg" type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
-    <!-- header -->
-    <header>
-       
-        <div class="dropdown">
-            <button class="dropbtn">Sneaker Brands</button>
-            <div class="dropdown-content">
-              <a href="https://stockx.com/">StockX</a>
-              <a href="https://www.grailed.com/">Grailed</a>
-              <a href="https://www.goat.com/">Goat</a>
-              <a href="https://www.nike.com/">Nike</a>
-              <a href="https://www.footlocker.com/">Foot Locker</a>
-              <a href="https://www.finishline.com/">Finish Line</a>
-              <a href="https://www.vans.com/">Vans</a>
-              <a href="https://www.yeezysupply.com/">Yeezy Supply</a>
-            </div>
-          </div>
-
-         
-          <div class="dropdown">
-            <button class="dropbtn">Clothing Brands</button>
-            <div class="dropdown-content">
-              <a href="https://champion.com/">Champion</a>
-              <a href="https://www.supremenewyork.com/">Supreme</a>
-              <a href="https://www.kith.com/">Kith</a>
-              <a href="https://www.shop.extrabutterny.com/">Extra Butter</a>
-              <a href="//https://www.off---white.com/">Off White</a>
-              <a href="https://www.louisvuitton.com/">Louis Vuitton</a>
-              <a href="https://www.gucci.com/">Gucci</a>
-              <a href="https://www.dolcegabbana.com/">Dolce & Gabbana</a>
-              <a href="https://www.vetementswebsite.com/">Vetements</a>
-              <a href="https://www.barneys.com/">Barneys</a>
-              <a href="https://www.us.bape.com/">Bape</a>
-            </div>
-          </div>
-
-
-          <div class="dropdown">
-            <button class="dropbtn">My Account</button>
-            <div class="dropdown-content">
-              <a href="login.html">Log In</a>
-              <a href="#">Log Out</a>
-              <a href="#">Sign Up</a>
-              <a href="#">Account Settings</a>
-              
-            </div>
-          </div>
-    </header>
-
-    
+    <form action="#">
+        <div class="imgcontainer">
+          <img src="https://sneakernews.com/wp-content/uploads/2018/09/jordan-1-court-purple-where-to-buy-5.jpg" alt="Avatar" class="avatar">
+        </div>
       
-    
-    <!-- content -->
-    <div class="hero">
-        <div class="title"> <h1>My Sneakers Homepage</h1></div>
-    </div>
-
-    
-
-    <!-- footer -->
-
-    <div class="footer"><h2>New Releases</h2></div>
-    <div class="footer"><h4>Parra x Nike SB Dunk Low   July 26th/27th   $100</h4></div>
-    <div class="footer">Most Profitable Sizes: 8-11</div>
-    <div class="footer">Resell prediction: $175-$210</div>
-    <div class="footer"><h4>Parra x Nike SB Blazer Low   July 26th/27th   $85</h4></div>
-    <div class="footer">Most Profitable Sizes: 7-10</div>
-    <div class="footer">Resell Prediction: $110-$130</div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input id="password"type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button id="loginbutton" type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>  
 </body>
 </html>
