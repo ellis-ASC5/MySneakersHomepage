@@ -6,29 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MySneakersHomepage</title>
     <link rel="stylesheet" href="login.css">
-    <script src="Login.js"></script>
+    
+    
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.css" />
 </head>
 <body>
-    <form action="#">
-        <div class="imgcontainer">
-          <img src="https://sneakernews.com/wp-content/uploads/2018/09/jordan-1-court-purple-where-to-buy-5.jpg" alt="Avatar" class="avatar">
-        </div>
+    
+          <img id="Jordan" src="https://sneakernews.com/wp-content/uploads/2018/09/jordan-1-court-purple-where-to-buy-5.jpg" alt="Avatar" class="avatar">
+        
       
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input id="username" type="text" placeholder="Enter Username" name="uname" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input id="password"type="password" placeholder="Enter Password" name="psw" required>
-      
-          <button id="loginbutton" type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
+         
+        <div id="firebaseui-auth-container"></div>
+        
       
         
-      </form>  
+       
+    
       
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA1ikgU7ZVeENENO5NofovgdXKdrSbKwCI",
+    authDomain: "mysneakershomepage.firebaseapp.com",
+    databaseURL: "https://mysneakershomepage.firebaseio.com",
+    projectId: "mysneakershomepage",
+    storageBucket: "",
+    messagingSenderId: "466707883409",
+    appId: "1:466707883409:web:bbc58b532516c00f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="Login.js"></script>
 </body>
 </html>
