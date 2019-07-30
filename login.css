@@ -84,3 +84,11 @@ form {
   justify-content: center;
   margin: auto;
 }
+
+@media (max-width: 600px){
+  #Jordan{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+}
