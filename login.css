@@ -74,7 +74,13 @@ form {
   }
   
 
-  #Jordan{
+  /* #Jordan{
     display: inline;
     margin: auto;
-  }
+  } */
+
+.Head{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

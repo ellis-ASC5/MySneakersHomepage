@@ -1,5 +1,13 @@
-document.getElementById('a').onclick = function() {
+// document.getElementById('a').onclick = function() {
+//     window.location.href = 'homepage.html';
+    
+//     return false;
+// }
+
+const btn = document.querySelector('#a');
+
+btn.addEventListener('click', function(){
     window.location.href = 'homepage.html';
     
-    return false;
-}
+    return false; 
+})
