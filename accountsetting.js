@@ -4,7 +4,7 @@
 //     return false;
 // }
 
-const btn = document.querySelector('#a');
+const btn = document.querySelector('#home');
 
 btn.addEventListener('click', function(){
     window.location.href = 'homepage.html';
