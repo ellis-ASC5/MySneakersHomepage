@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="accountsetting.css">
 <script src="accountsetting.js" defer></script>
+
 <html>
   <head>
     <link rel="shortcut icon" href="https://sneakernews.com/wp-content/uploads/2018/09/jordan-1-court-purple-where-to-buy-5.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyA1ikgU7ZVeENENO5NofovgdXKdrSbKwCI",
+          authDomain: "mysneakershomepage.firebaseapp.com",
+          databaseURL: "https://mysneakershomepage.firebaseio.com",
+          projectId: "mysneakershomepage",
+          storageBucket: "mysneakershomepage.appspot.com",
+          messagingSenderId: "466707883409",
+          appId: "1:466707883409:web:bbc58b532516c00f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+
+
+
+
+
+
 <style> 
 input[type=text] {
   width: 130px;
@@ -29,15 +57,15 @@ input[type=text]:focus {
 
   </head>
 <body>
-
+    
 <h2>Nike</h2>
 
 <form action="/action_page.php">
   Nike Username:<br>
-  <input type="text" name="username" value=>
+  <input id="nikeusername" type="text" name="username" value=>
   <br>
   Nike Password:<br>
-  <input type="text" name="password" value=>
+  <input id="nikepassword" type="text" name="password" value=>
   <br><br>
   
 </form> 
@@ -51,14 +79,33 @@ input[type=text]:focus {
   Kith Password:<br>
   <input type="text" name="password" value=>
   <br><br>
-  <button class="a" id="save">Save</button>
+  <button onclick="writeData()">Save</button>
   <button type="submit">Home</button>
 </form> 
 
 
 <br><br>
   
- 
+<script>
+    // Your web app's Firebase configuration
+    
+    // Initialize Firebase
+  
+  var name = document.getElementById("nikeusername").value
+  
+    function writeData(){
+      event.preventDefault();
+      firebase.database().ref(name).set({
+          name: document.getElementById("nikeusername").value,
+          age: document.getElementById("nikepassword").value
+          
+      });
+      
+    }
+  
+    console.log(document.getElementById("nikeusername").value)
+    console.log(document.getElementById("nikepassword").value)
+  </script> 
 
 
 
