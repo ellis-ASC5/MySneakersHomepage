@@ -74,10 +74,10 @@ input[type=text]:focus {
 
 <form action="homepage.html" method="get">
   Kith Username:<br>
-  <input type="text" name="username" value=>
+  <input id="kithusername" type="text" name="username" value=>
   <br>
   Kith Password:<br>
-  <input type="text" name="password" value=>
+  <input id="kithpassword" type="text" name="password" value=>
   <br><br>
   <button onclick="writeData()">Save</button>
   <button type="submit" id="home">Home</button>
@@ -96,16 +96,17 @@ input[type=text]:focus {
     function writeData(){
       event.preventDefault();
       
-      firebase.database().ref(document.getElementById("nikeusername").value).set({
-          nikeUsername: document.getElementById("nikeusername").value,
-          nikePassword: document.getElementById("nikepassword").value
+      firebase.database().ref(document.getElementById(User UID).value).set({
+          NikeUsername: document.getElementById("nikeusername").value,
+          NikePassword: document.getElementById("nikepassword").value
+          KithUsername: document.getElementById("kithusername").value,
+          KithPassword: document.getElementById("kithpassword").value
           
       });
       
     }
   
-    console.log(document.getElementById("nikeusername").value)
-    console.log(document.getElementById("nikepassword").value)
+    
   </script> 
 
 
