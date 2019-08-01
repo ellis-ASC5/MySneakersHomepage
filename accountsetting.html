@@ -91,13 +91,14 @@ input[type=text]:focus {
     
     // Initialize Firebase
   
-  var name = document.getElementById("nikeusername").value
+  
   
     function writeData(){
       event.preventDefault();
-      firebase.database().ref(name).set({
-          name: document.getElementById("nikeusername").value,
-          age: document.getElementById("nikepassword").value
+      
+      firebase.database().ref(document.getElementById("nikeusername").value).set({
+          nikeUsername: document.getElementById("nikeusername").value,
+          nikePassword: document.getElementById("nikepassword").value
           
       });
       
