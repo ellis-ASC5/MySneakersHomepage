@@ -96,7 +96,7 @@ input[type=text]:focus {
     function writeData(){
       event.preventDefault();
       
-      firebase.database().ref(document.getElementById(User UID).value).set({
+      firebase.database().ref(document.getElementById("nikeusername").value).set({
           NikeUsername: document.getElementById("nikeusername").value,
           NikePassword: document.getElementById("nikepassword").value,
           KithUsername: document.getElementById("kithusername").value,
