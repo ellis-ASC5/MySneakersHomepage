@@ -57,7 +57,12 @@ input[type=text]:focus {
 
   </head>
 <body>
-    
+  <h2>Account Username</h2>  
+  <form action="/action_page.php">
+  <input id="username" type="text" name="password" value=>
+</form>
+  
+  
 <h2>Nike</h2>
 
 <form action="/action_page.php">
@@ -96,7 +101,7 @@ input[type=text]:focus {
     function writeData(){
       event.preventDefault();
       
-      firebase.database().ref(document.getElementById("nikeusername").value).set({
+      firebase.database().ref(document.getElementById(document.getElementById("username").value).value).set({
           NikeUsername: document.getElementById("nikeusername").value,
           NikePassword: document.getElementById("nikepassword").value,
           KithUsername: document.getElementById("kithusername").value,
