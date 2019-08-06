@@ -63,10 +63,10 @@ input[type=text]:focus {
 
 <form action="/action_page.php">
   Nike Username:<br>
-  <input id="nikeusername" type="text" name="username" value=>
+  <input id="nikeusername" type="text" name="username">
   <br>
   Nike Password:<br>
-  <input id="nikepassword" type="text" name="password" value=>
+  <input id="nikepassword" type="text" name="password">
   <br><br>
   
 </form> 
@@ -75,10 +75,10 @@ input[type=text]:focus {
 
 <form action="homepage.html" method="get">
   Kith Username:<br>
-  <input id="kithusername" type="text" name="username" value=>
+  <input id="kithusername" type="text" name="username" >
   <br>
   Kith Password:<br>
-  <input id="kithpassword" type="text" name="password" value=>
+  <input id="kithpassword" type="text" name="password" >
   <br><br>
   <button onclick="writeData()">Save</button>
   <button type="submit" id="home">Home</button>
@@ -92,7 +92,22 @@ input[type=text]:focus {
     
     // Initialize Firebase
   
-  
+    firebase.auth().onAuthStateChanged(function(user){
+    usr= user;
+    if (user){
+        console.log(user.uid);
+
+        firebase.database().ref(usr.uid).on('value', function(data){
+        console.log(data.val());
+        console.log('poop', data.val().NikeUsername);
+        document.getElementById('nikeusername').value = data.val().NikeUsername
+        document.getElementById('nikepassword').value = data.val().NikePassword
+        document.getElementById('kithusername').value = data.val().KithUsername
+        document.getElementById('kithpassword').value = data.val().KithPassword
+
+      })
+    }
+})
   
     function writeData(){
       event.preventDefault();
@@ -105,11 +120,8 @@ input[type=text]:focus {
           
       });
       
+        console.log(usr.uid)
 
-      firebase.database().ref(usr.uid).on('value', function(data){
-        console.log(data.val());
-        document.getElementById('nikeusername').value = data.val().NikeUsername
-      })
     }
   
       }
