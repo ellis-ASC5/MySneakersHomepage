@@ -108,6 +108,7 @@ input[type=text]:focus {
 
       firebase.database().ref(usr.uid).on('value', function(data){
         console.log(data.val());
+        document.getElementById('nikeusername').value = data.val().NikeUsername
       })
     }
   
