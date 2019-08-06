@@ -1,4 +1,5 @@
 
+
 var uiConfig = {
     signInSuccessUrl: 'homepage.html',
     signInOptions: [

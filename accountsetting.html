@@ -96,9 +96,8 @@ input[type=text]:focus {
   
     function writeData(){
       event.preventDefault();
-      firebase.auth().onAuthStateChanged(function(user){
-    if (user){
-      firebase.database().ref(user.uid).set({
+    if (usr){
+      firebase.database().ref(usr.uid).set({
           NikeUsername: document.getElementById("nikeusername").value,
           NikePassword: document.getElementById("nikepassword").value,
           KithUsername: document.getElementById("kithusername").value,
@@ -106,9 +105,15 @@ input[type=text]:focus {
           
       });
       
+
+      firebase.database().ref(usr.uid).on('value', function(data){
+        console.log(data.val());
+      })
     }
-  }
-      )}
+  
+      }
+      
+     
 
   
     

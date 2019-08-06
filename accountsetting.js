@@ -13,9 +13,10 @@ btn.addEventListener('click', function(){
 })
 
 
-
+let usr;
 
 firebase.auth().onAuthStateChanged(function(user){
+    usr= user;
     if (user){
         console.log(user.uid);
     }
