@@ -71,6 +71,18 @@ input[type=text]:focus {
   
 </form> 
 
+<h2>StockX</h2>
+
+<form action="/action_page.php">
+  StockX Username:<br>
+  <input id="stockxusername" type="text" name="username">
+  <br>
+  StockX Password:<br>
+  <input id="stockxpassword" type="text" name="password">
+  <br><br>
+  
+</form> 
+
 <h2>Kith</h2>
 
 <form action="homepage.html" method="get">
@@ -102,6 +114,8 @@ input[type=text]:focus {
         document.getElementById('nikepassword').value = data.val().NikePassword
         document.getElementById('kithusername').value = data.val().KithUsername
         document.getElementById('kithpassword').value = data.val().KithPassword
+        document.getElementById('stockxusername').value = data.val().StockXUsername
+        document.getElementById('stockxpassword').value = data.val().StockXPassword
 
       })
     }
