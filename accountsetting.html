@@ -83,6 +83,17 @@ input[type=text]:focus {
   
 </form> 
 
+<h2>Extra Butter</h2>
+<form action="/action_page.php">
+  Extra Butter Username:<br>
+  <input id="butterusername" type="text" name="username">
+  <br>
+  Extra Butter Password:<br>
+  <input id="butterpassword" type="text" name="password">
+  <br><br>
+  
+</form> 
+
 <h2>Kith</h2>
 
 <form action="homepage.html" method="get">
@@ -116,6 +127,8 @@ input[type=text]:focus {
         document.getElementById('kithpassword').value = data.val().KithPassword
         document.getElementById('stockxusername').value = data.val().StockXUsername
         document.getElementById('stockxpassword').value = data.val().StockXPassword
+        document.getElementById('butterusername').value = data.val().ExtraButterUsername
+        document.getElementById('butterpassword').value = data.val().ExtraButterPassword
 
       })
     }
@@ -130,7 +143,9 @@ input[type=text]:focus {
           KithUsername: document.getElementById("kithusername").value,
           KithPassword: document.getElementById("kithpassword").value,
           StockXUsername: document.getElementById("stockxusername").value,
-          StockXPassword: document.getElementById("stockxpassword").value
+          StockXPassword: document.getElementById("stockxpassword").value,
+          ExtraButterUsername: document.getElementById("butterusername").value,
+          ExtraButterPassword: document.getElementById("butterpassword").value
           
       });
       
