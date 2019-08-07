@@ -88,16 +88,14 @@ input[type=text]:focus {
 <br><br>
   
 <script>
-    // Your web app's Firebase configuration
-    
-    // Initialize Firebase
-  
     firebase.auth().onAuthStateChanged(function(user){
-    usr= user;
+      // if user is logged in
+     
+
     if (user){
         console.log(user.uid);
 
-        firebase.database().ref(usr.uid).on('value', function(data){
+        firebase.database().ref(user.uid).on('value', function(data){
         console.log(data.val());
         console.log('poop', data.val().NikeUsername);
         document.getElementById('nikeusername').value = data.val().NikeUsername
