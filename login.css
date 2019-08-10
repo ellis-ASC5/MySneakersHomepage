@@ -93,3 +93,9 @@ form {
     height: 10%;
   }
 }
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
