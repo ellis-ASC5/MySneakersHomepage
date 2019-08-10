@@ -107,8 +107,30 @@ input[type=text]:focus {
   <button type="submit" id="home">Home</button>
 </form> 
 
+<h2>Grailed</h2>
 
+<form action="/action_page.php">
+  Grailed Username:<br>
+  <input id="grailedusername" type="text" name="username">
+  <br>
+  Grailed Password:<br>
+  <input id="grailedpassword" type="text" name="password">
+  <br><br>
+  
+</form> 
+
+<form action="/action_page.php">
+  Goat Username:<br>
+  <input id="goatusername" type="text" name="username">
+  <br>
+  Goat Password:<br>
+  <input id="goatpassword" type="text" name="password">
+  <br><br>
+  
+</form> 
 <br><br>
+
+
   
 <script>
     firebase.auth().onAuthStateChanged(function(user){
@@ -120,7 +142,6 @@ input[type=text]:focus {
 
         firebase.database().ref(user.uid).on('value', function(data){
         console.log(data.val());
-        console.log('poop', data.val().NikeUsername);
         document.getElementById('nikeusername').value = data.val().NikeUsername
         document.getElementById('nikepassword').value = data.val().NikePassword
         document.getElementById('kithusername').value = data.val().KithUsername
@@ -129,6 +150,10 @@ input[type=text]:focus {
         document.getElementById('stockxpassword').value = data.val().StockXPassword
         document.getElementById('butterusername').value = data.val().ExtraButterUsername
         document.getElementById('butterpassword').value = data.val().ExtraButterPassword
+        document.getElementById('grailedusername').value = data.val().GrailedUsername
+        document.getElementById('grailedpassword').value = data.val().GrailedPassword
+        document.getElementById('goatusername').value = data.val().GoatUsername
+        document.getElementById('goatpassword').value = data.val().GoatPassword
 
       })
     }
@@ -145,7 +170,11 @@ input[type=text]:focus {
           StockXUsername: document.getElementById("stockxusername").value,
           StockXPassword: document.getElementById("stockxpassword").value,
           ExtraButterUsername: document.getElementById("butterusername").value,
-          ExtraButterPassword: document.getElementById("butterpassword").value
+          ExtraButterPassword: document.getElementById("butterpassword").value,
+          GrailedUsername: document.getElementById("grailedusername").value,
+          GrailedPassword: document.getElementById("grailedpassword").value,
+          GoatUsername: document.getElementById("goatusername").value,
+          GoatPassword: document.getElementById("goatpassword").value
           
       });
       
