@@ -50,7 +50,7 @@ body{
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: blueviolet;}
+.dropdown:hover .dropbtn {background-color: white;}
 
 
   /* Safari 4.0 - 8.0 */
