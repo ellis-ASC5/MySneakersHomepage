@@ -95,7 +95,12 @@ input[type=text]:focus {
 
   </head>
 <body>
-  
+  <h2>Set Account Username</h2>
+
+  <form action="homepage.html">
+    <input id="username" type="text" name="username">
+    <br><br>
+  </form>  
   
   
 <h2>Nike</h2>
@@ -167,10 +172,11 @@ input[type=text]:focus {
   
 </form> 
 <br><br>
-<font action="homepage.html">
+<form action="homepage.html">
   <button onclick="writeData()">Save</button>
   <button type="submit" id="home">Home</button>
-</font>
+</form>
+
 
 
   
@@ -196,6 +202,7 @@ input[type=text]:focus {
         document.getElementById('grailedpassword').value = data.val().GrailedPassword
         document.getElementById('goatusername').value = data.val().GoatUsername
         document.getElementById('goatpassword').value = data.val().GoatPassword
+        document.getElementById('username').value = data.val().AccountUsername
 
       })
     }
@@ -205,6 +212,7 @@ input[type=text]:focus {
       event.preventDefault();
     if (usr){
       firebase.database().ref(usr.uid).set({
+          AccountUsername: document.getElementById("username").value,
           NikeUsername: document.getElementById("nikeusername").value,
           NikePassword: document.getElementById("nikepassword").value,
           KithUsername: document.getElementById("kithusername").value,
