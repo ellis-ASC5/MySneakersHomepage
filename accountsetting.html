@@ -171,7 +171,17 @@ input[type=text]:focus {
   <br><br>
   
 </form> 
-<br><br>
+  <h2>Champion</h2>
+  
+  <form action="/action_page.php">
+  Champion Username:<br>
+  <input id="championusername" type="text" name="username">
+  <br>
+  Champion Password:<br>
+  <input id="championpassword" type="text" name="password">
+  <br><br>
+  
+</form> 
 <form action="homepage.html">
   <button onclick="writeData()">Save</button>
   <button type="submit" id="home">Home</button>
@@ -202,6 +212,8 @@ input[type=text]:focus {
         document.getElementById('grailedpassword').value = data.val().GrailedPassword
         document.getElementById('goatusername').value = data.val().GoatUsername
         document.getElementById('goatpassword').value = data.val().GoatPassword
+        document.getElementById('championusername').value = data.val().ChampionUsername
+        document.getElementById('championpassword').value = data.val().ChampionPassword
         document.getElementById('username').value = data.val().AccountUsername
 
       })
@@ -224,7 +236,9 @@ input[type=text]:focus {
           GrailedUsername: document.getElementById("grailedusername").value,
           GrailedPassword: document.getElementById("grailedpassword").value,
           GoatUsername: document.getElementById("goatusername").value,
-          GoatPassword: document.getElementById("goatpassword").value
+          GoatPassword: document.getElementById("goatpassword").value,
+      ChampionUsername: document.getElementById("championusername").value,
+          ChampionPassword: document.getElementById("championpassword").value
           
       });
       
